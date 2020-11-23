@@ -5,7 +5,7 @@ function setup(){
   noStroke();
   createCanvas(800, 800);
   background(255);
-  balloon("I love sakurazaka46",x,y);
+  balloon("I love sakurazaka46",20,20);
 }
 
 function balloon(t,x,y){
