@@ -3,23 +3,21 @@
 // 吹き出しにしっぽを付けてみよう
 function setup(){
   noStroke();
-  createCanvas(400, 400);
+  createCanvas(800, 800);
   background(255);
-  balloon("I love keyakizaka46");
+  balloon("I love sakurazaka46",x,y);
 }
 
-function balloon(t){
+function balloon(t,x,y){
 
   let w = textWidth(t);
   let h = textAscent() + textDescent();
-  let p = 50;
-  fill(255,0,0);
-  rect(5, 5, w + p * 2, h + p * 2);
-  fill(255);
-  text(t, p, h + p);
-
-
-fill(255,0,0)
-   triangle(w+p*2-30,h+p*2+5,w+p*2-15,h+p*2+35,w+p*2+5,h+p*2+5);
-
+  let m = w+50;
+  let l = h+50;
+  fill(200);
+  rect( x , y , m, l );
+  fill(0);
+  text(t, x+m/6, y+l/2 );
+  fill(200);
+triangle(x+m,y+l, x+m-30,y+l, x+m+15,y+l+20);
 }
